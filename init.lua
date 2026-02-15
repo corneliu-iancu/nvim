@@ -46,9 +46,32 @@ require("lazy").setup({
             })
         end,
     },
+    {
+        "catppuccin/nvim",
+        name = "catppuccin",
+        config = function()
+            require("catppuccin").setup({
+                flavour = "mocha",
+                transparent_background = true,
+                no_italic = true,
+            })
+        end,
+    },
+    {
+        "rebelot/kanagawa.nvim",
+        config = function()
+            require("kanagawa").setup({
+                transparent = true,
+                dimInactive = false,
+                commentStyle = { italic = false },
+                keywordStyle = { italic = false },
+            })
+        end,
+    },
 })
 
--- Set theme (change to "gruvbox" or "tokyonight" to switch)
+-- Set theme (swap the name to switch)
+-- Available: "rose-pine", "gruvbox", "tokyonight", "catppuccin", "kanagawa"
 vim.cmd.colorscheme("rose-pine")
 
 -- Line numbers
