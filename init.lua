@@ -131,6 +131,9 @@ vim.opt.colorcolumn = "80"
 -- Fill empty lines with spaces so the terminal bg doesn't bleed through
 vim.opt.fillchars = { eob = " " }
 
+-- Exit terminal mode with double Escape
+vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>")
+
 -- Keymaps to uncomment once you're comfortable with vimtutor:
 --
 -- Open file explorer

@@ -31,12 +31,15 @@ Switch anytime with `:colorscheme <name>`.
 - Persistent undo (survives restarts)
 - No swap/backup files
 - Incremental search, no lingering highlights
-- Transparent backgrounds
+- Opaque backgrounds (transparency disabled)
 - 80-column guide
 
 ### Keymaps
 
-Commented out by design — ready to enable after completing `vimtutor`.
+Most keymaps are commented out by design — ready to enable after completing `vimtutor`.
+
+Active keymaps:
+- `<Esc><Esc>` in terminal mode — exit to normal mode
 
 ## Plugin Manager
 
