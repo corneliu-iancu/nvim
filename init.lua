@@ -19,7 +19,7 @@ require("lazy").setup({
         name = "rose-pine",
         config = function()
             require("rose-pine").setup({
-                disable_background = true,
+                disable_background = false,
                 styles = { italic = false },
             })
         end,
@@ -38,7 +38,7 @@ require("lazy").setup({
         config = function()
             require("tokyonight").setup({
                 style = "storm",
-                transparent = true,
+                transparent = false,
                 styles = {
                     comments = { italic = false },
                     keywords = { italic = false },
@@ -52,7 +52,7 @@ require("lazy").setup({
         config = function()
             require("catppuccin").setup({
                 flavour = "mocha",
-                transparent_background = true,
+                transparent_background = false,
                 no_italic = true,
             })
         end,
@@ -61,7 +61,7 @@ require("lazy").setup({
         "rebelot/kanagawa.nvim",
         config = function()
             require("kanagawa").setup({
-                transparent = true,
+                transparent = false,
                 dimInactive = false,
                 commentStyle = { italic = false },
                 keywordStyle = { italic = false },
@@ -73,6 +73,21 @@ require("lazy").setup({
 -- Set theme (swap the name to switch)
 -- Available: "rose-pine", "gruvbox", "tokyonight", "catppuccin", "kanagawa"
 vim.cmd.colorscheme("rose-pine")
+
+-- Neovide (GUI) settings
+if vim.g.neovide then
+    vim.o.guifont = "FiraCode Nerd Font:h14"
+    vim.g.neovide_cursor_animation_length = 0.08
+    vim.g.neovide_cursor_trail_size = 0.5
+    vim.g.neovide_cursor_vfx_mode = ""
+    vim.g.neovide_scroll_animation_length = 0.2
+    vim.g.neovide_hide_mouse_when_typing = true
+    vim.g.neovide_remember_window_size = true
+    vim.g.neovide_padding_top = 4
+    vim.g.neovide_padding_bottom = 4
+    vim.g.neovide_padding_left = 8
+    vim.g.neovide_padding_right = 8
+end
 
 -- Line numbers
 vim.opt.nu = true
@@ -112,6 +127,9 @@ vim.opt.updatetime = 50
 
 -- Vertical guide at column 80
 vim.opt.colorcolumn = "80"
+
+-- Fill empty lines with spaces so the terminal bg doesn't bleed through
+vim.opt.fillchars = { eob = " " }
 
 -- Keymaps to uncomment once you're comfortable with vimtutor:
 --
