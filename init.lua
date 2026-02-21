@@ -145,6 +145,9 @@ vim.opt.incsearch = true
 -- Full color support (needed for themes)
 vim.opt.termguicolors = true
 
+-- Use system clipboard for yank/paste
+vim.opt.clipboard = "unnamedplus"
+
 -- Keep cursor 8 lines from screen edge when scrolling
 vim.opt.scrolloff = 8
 
