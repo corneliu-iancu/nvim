@@ -129,8 +129,9 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 
--- No line wrapping
-vim.opt.wrap = false
+-- Enable line wrapping for long lines
+vim.opt.wrap = true
+vim.opt.linebreak = true  -- Break at word boundaries
 
 -- No swap/backup files, persistent undo instead
 vim.opt.swapfile = false
